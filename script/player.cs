@@ -25,8 +25,16 @@ public class player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if ( Input.GetKey(KeyCode.L))
+        {
+            animator.SetBool("atdoc", true);
+        }
+        else
+        {
+            animator.SetBool("atdoc", false);
+        }
         // bơi qua lại
-        if (Input.GetKey(KeyCode.LeftArrow)|| Input.GetKey(KeyCode.A))
+         if (Input.GetKey(KeyCode.LeftArrow)|| Input.GetKey(KeyCode.A))
         {
             move1 = -1;
             Vector3 flip = transform.localScale; //xuay ảnh
@@ -51,6 +59,7 @@ public class player : MonoBehaviour
         {
             move1 = 0;
             animator.SetBool("swngang", false);
+
 
         }
 
@@ -88,12 +97,11 @@ public class player : MonoBehaviour
         {
             animator.SetBool("idiamatnuoc", true);
         }
-        else if(swmatnuoc.gameObject.tag != "matnuoc")
-        {
-            animator.SetBool("idiamatnuoc", false);
-
-        }
-        else
+       
+    }
+    private void OnTriggerExit2D(Collider2D exitmatnuoc)
+    {
+        if (exitmatnuoc.gameObject.tag == "matnuoc")
         {
             animator.SetBool("idiamatnuoc", false);
         }

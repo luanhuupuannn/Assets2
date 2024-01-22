@@ -121,17 +121,35 @@ public class player : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D swmatnuoc)
     {
-        if(swmatnuoc.gameObject.tag == "matnuoc")
+       
+
+        if (swmatnuoc.gameObject.tag == "matnuoc")
         {
             animator.SetBool("idiamatnuoc", true);
         }
-
+        // đụng phải cá mập
         if (swmatnuoc.gameObject.tag == "camap")
         {
+            animator.SetBool("trumau", true);
             luongmauhientai = luongmauhientai - 2;
             mau.capnhatthanhmau(luongmauhientai, luongmautoida);
+            Invoke("TatHieuUngTrungDon", 2f);
+
+            if (luongmauhientai <= 0)
+            {
+                animator.SetBool("dead", true);
+            }
+
         }
+
+
     }
+
+    void TatHieuUngTrungDon()
+    {
+        animator.SetBool("trumau", false);
+    }
+
     private void OnTriggerExit2D(Collider2D exitmatnuoc)
     {
         if (exitmatnuoc.gameObject.tag == "matnuoc")
@@ -139,5 +157,6 @@ public class player : MonoBehaviour
             animator.SetBool("idiamatnuoc", false);
         }
     }
+   
 }
 

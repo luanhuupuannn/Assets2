@@ -10,6 +10,7 @@ public class player : MonoBehaviour
     public float move2;  // For vertical movement
     Animator animator;
 
+    public GameObject tamdanh;
     private int flip;
     Rigidbody2D rb;
 
@@ -25,14 +26,22 @@ public class player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        // attack
         if ( Input.GetKey(KeyCode.L))
         {
             animator.SetBool("atdoc", true);
+            tamdanh.SetActive(true);
+
         }
         else
         {
+            tamdanh.SetActive(false);
+
             animator.SetBool("atdoc", false);
         }
+
+
         // bơi qua lại
          if (Input.GetKey(KeyCode.LeftArrow)|| Input.GetKey(KeyCode.A))
         {
@@ -77,7 +86,13 @@ public class player : MonoBehaviour
             move2 = 0;  // No vertical movement
         }
 
+
         if(move2 ==1&& move1 == 1|| move2 == 1 && move1 == -1)
+        {
+            animator.SetBool("swcheo", true);
+        }
+
+        if (move2 == 1 && move1 == 1 || move2 == 1 && move1 == -1)
         {
             animator.SetBool("swcheo", true);
         }

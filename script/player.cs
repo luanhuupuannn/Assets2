@@ -1,9 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
 
 public class player : MonoBehaviour
 {
+
+    public hp mau;
+    public float luongmauhientai;
+    public float luongmautoida = 10;
+
     // Start is called before the first frame update
 
     public float move1;
@@ -18,6 +25,9 @@ public class player : MonoBehaviour
     int speed = 5;
     void Start()
     {
+        luongmauhientai = luongmautoida;
+        mau.capnhatthanhmau(luongmauhientai, luongmautoida);
+
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
 
@@ -26,10 +36,13 @@ public class player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+       
+           
         // attack
         if ( Input.GetKey(KeyCode.L))
         {
+           
+
             animator.SetBool("atdoc", true);
             tamdanh.SetActive(true);
 
@@ -112,7 +125,12 @@ public class player : MonoBehaviour
         {
             animator.SetBool("idiamatnuoc", true);
         }
-       
+
+        if (swmatnuoc.gameObject.tag == "camap")
+        {
+            luongmauhientai = luongmauhientai - 2;
+            mau.capnhatthanhmau(luongmauhientai, luongmautoida);
+        }
     }
     private void OnTriggerExit2D(Collider2D exitmatnuoc)
     {

@@ -7,8 +7,8 @@ public class randomleft : MonoBehaviour
     public GameObject tat;
     public GameObject fish;
    
-    float timeToAddBall1 = 4f;
-   public float thoigiantat = 10f; // Bộ đếm ngược để tắt tat
+    float timeToAddBall1 = 5f;
+   public float thoigiantat = 15f; // Bộ đếm ngược để tắt tat
 
    public float x1;
     public float x2;
@@ -33,7 +33,7 @@ public class randomleft : MonoBehaviour
             if (timeToAddBall1 <= 0)
             {
                 addball();
-                timeToAddBall1 = 4f; // Đặt lại bộ đếm cho việc thêm bóng
+                timeToAddBall1 = 5f; // Đặt lại bộ đếm cho việc thêm bóng
             }
         }
 

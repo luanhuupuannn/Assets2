@@ -46,6 +46,8 @@ public class player : MonoBehaviour
             animator.SetBool("atdoc", true);
             tamdanh.SetActive(true);
 
+
+
         }
         else
         {
@@ -149,6 +151,7 @@ public class player : MonoBehaviour
     {
         animator.SetBool("trumau", false);
     }
+    
 
     private void OnTriggerExit2D(Collider2D exitmatnuoc)
     {
@@ -157,6 +160,6 @@ public class player : MonoBehaviour
             animator.SetBool("idiamatnuoc", false);
         }
     }
-   
+
 }
 

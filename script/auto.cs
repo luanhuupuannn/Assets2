@@ -47,6 +47,7 @@ public class auto : MonoBehaviour
             {
                 Vector3 flipmt = transform.localScale; //xuay ảnh
                 flipmt.x = 1;
+
                 transform.localScale = flipmt;
             }
         }

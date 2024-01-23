@@ -1,15 +1,23 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
 
 public class player : MonoBehaviour
 {
+
+    public hp mau;
+    public float luongmauhientai;
+    public float luongmautoida = 10;
+
     // Start is called before the first frame update
 
     public float move1;
     public float move2;  // For vertical movement
     Animator animator;
 
+    public GameObject tamdanh;
     private int flip;
     Rigidbody2D rb;
 
@@ -17,6 +25,9 @@ public class player : MonoBehaviour
     int speed = 5;
     void Start()
     {
+        luongmauhientai = luongmautoida;
+        mau.capnhatthanhmau(luongmauhientai, luongmautoida);
+
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
 
@@ -25,14 +36,25 @@ public class player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+       
+           
+        // attack
         if ( Input.GetKey(KeyCode.L))
         {
+           
+
             animator.SetBool("atdoc", true);
+            tamdanh.SetActive(true);
+
         }
         else
         {
+            tamdanh.SetActive(false);
+
             animator.SetBool("atdoc", false);
         }
+
+
         // bơi qua lại
          if (Input.GetKey(KeyCode.LeftArrow)|| Input.GetKey(KeyCode.A))
         {
@@ -77,7 +99,13 @@ public class player : MonoBehaviour
             move2 = 0;  // No vertical movement
         }
 
+
         if(move2 ==1&& move1 == 1|| move2 == 1 && move1 == -1)
+        {
+            animator.SetBool("swcheo", true);
+        }
+
+        if (move2 == 1 && move1 == 1 || move2 == 1 && move1 == -1)
         {
             animator.SetBool("swcheo", true);
         }
@@ -93,12 +121,35 @@ public class player : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D swmatnuoc)
     {
-        if(swmatnuoc.gameObject.tag == "matnuoc")
+       
+
+        if (swmatnuoc.gameObject.tag == "matnuoc")
         {
             animator.SetBool("idiamatnuoc", true);
         }
-       
+        // đụng phải cá mập
+        if (swmatnuoc.gameObject.tag == "camap")
+        {
+            animator.SetBool("trumau", true);
+            luongmauhientai = luongmauhientai - 2;
+            mau.capnhatthanhmau(luongmauhientai, luongmautoida);
+            Invoke("TatHieuUngTrungDon", 2f);
+
+            if (luongmauhientai <= 0)
+            {
+                animator.SetBool("dead", true);
+            }
+
+        }
+
+
     }
+
+    void TatHieuUngTrungDon()
+    {
+        animator.SetBool("trumau", false);
+    }
+
     private void OnTriggerExit2D(Collider2D exitmatnuoc)
     {
         if (exitmatnuoc.gameObject.tag == "matnuoc")
@@ -106,5 +157,6 @@ public class player : MonoBehaviour
             animator.SetBool("idiamatnuoc", false);
         }
     }
+   
 }
 

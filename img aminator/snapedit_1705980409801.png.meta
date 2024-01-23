@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 628f5d8a248722f4a8839ba107e7f346
+guid: 2efaeb62d10f08e40a1dbdeba7621326
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -123,190 +123,148 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: snapedit_1705746731667_0
+      name: snapedit_1705980409801_0
       rect:
         serializedVersion: 2
-        x: 6
-        y: 150
-        width: 49
-        height: 51
+        x: 0
+        y: 73
+        width: 116
+        height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 39d11d7c66321fc43acf4f2ea6fddfd7
-      internalID: 603912460
+      spriteID: d5935c08bd305034da81cf2d3799b809
+      internalID: -1073424360
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: snapedit_1705746731667_1
+      name: snapedit_1705980409801_1
       rect:
         serializedVersion: 2
-        x: 92
-        y: 106
-        width: 153
-        height: 93
+        x: 106
+        y: 2
+        width: 108
+        height: 72
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: da26c7eff165f6447a06d41b216284b6
-      internalID: 1457280311
+      spriteID: 336727a33268a4a488a92d2c16a81de5
+      internalID: 1477906269
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: snapedit_1705746731667_2
+      name: snapedit_1705980409801_2
       rect:
         serializedVersion: 2
-        x: 6
-        y: 106
-        width: 58
-        height: 39
+        x: 117
+        y: 73
+        width: 107
+        height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7f636d669f51ef4479da830345dc7732
-      internalID: 2103496173
+      spriteID: 2123fde91219fe94a88ff0f3aa66b704
+      internalID: -1574879317
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: snapedit_1705746731667_3
+      name: snapedit_1705980409801_3
       rect:
         serializedVersion: 2
-        x: 180
-        y: 135
-        width: 94
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 43db61c7c70f4254daf8c77ce6174862
-      internalID: 771268287
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: snapedit_1705746731667_4
-      rect:
-        serializedVersion: 2
-        x: 6
-        y: 61
-        width: 34
-        height: 38
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b79bc6bf9022e594ebed17f2b10de67b
-      internalID: 1869560731
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: snapedit_1705746731667_5
-      rect:
-        serializedVersion: 2
-        x: 95
-        y: 61
-        width: 16
-        height: 28
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c1483fb6830baf84e987167a9c9ea07f
-      internalID: 467854043
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: snapedit_1705746731667_6
-      rect:
-        serializedVersion: 2
-        x: 136
+        x: 0
         y: 16
-        width: 63
-        height: 94
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 43474d0713db1ef40b7da6946a88d0d9
-      internalID: -763035637
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: snapedit_1705746731667_7
-      rect:
-        serializedVersion: 2
-        x: 228
-        y: 17
-        width: 16
-        height: 93
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 44cdd3689c2b22643b209b56738cf9f7
-      internalID: 1459849621
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: snapedit_1705746731667_8
-      rect:
-        serializedVersion: 2
-        x: 6
-        y: 16
-        width: 31
+        width: 21
         height: 37
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6e151dbb6f7fba141a97b33579061c47
-      internalID: -875486446
+      spriteID: 62bc34abcc347144aacebd19363d1f86
+      internalID: -156124749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: snapedit_1705980409801_4
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 15
+        width: 15
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 107b031b26054fc4096d6627e1d07436
+      internalID: -1256965623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: snapedit_1705980409801_5
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 16
+        width: 17
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85112a5860f36ea4ea65e5f8dd01cf06
+      internalID: -1894101515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: snapedit_1705980409801_6
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 25
+        width: 29
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d6a6e688f8d2894981d4f6dafc8f1c9
+      internalID: 607424439
       vertices: []
       indices: 
       edges: []
@@ -322,16 +280,13 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      snapedit_1705746731667_0: 603912460
-      snapedit_1705746731667_1: 1457280311
-      snapedit_1705746731667_2: 2103496173
-      snapedit_1705746731667_3: 771268287
-      snapedit_1705746731667_4: 1869560731
-      snapedit_1705746731667_5: 467854043
-      snapedit_1705746731667_6: -763035637
-      snapedit_1705746731667_7: 1459849621
-      snapedit_1705746731667_8: -875486446
-      snapedit_1705746731667_9: -285391501
+      snapedit_1705980409801_0: -1073424360
+      snapedit_1705980409801_1: 1477906269
+      snapedit_1705980409801_2: -1574879317
+      snapedit_1705980409801_3: -156124749
+      snapedit_1705980409801_4: -1256965623
+      snapedit_1705980409801_5: -1894101515
+      snapedit_1705980409801_6: 607424439
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class player : MonoBehaviour
 {
 
+
     public hp mau;
     public float luongmauhientai;
     public float luongmautoida = 10;
@@ -22,20 +23,24 @@ public class player : MonoBehaviour
     Rigidbody2D rb;
 
 
+
+
     int speed = 5;
     void Start()
-    {
+    {   
         luongmauhientai = luongmautoida;
         mau.capnhatthanhmau(luongmauhientai, luongmautoida);
 
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
 
+
     }
 
     // Update is called once per frame
     void Update()
     {
+       
        
            
         // attack

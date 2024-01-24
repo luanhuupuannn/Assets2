@@ -12,10 +12,12 @@ public class danhca : MonoBehaviour
     public TextMeshProUGUI quest;
     int tong = 0;
     int nhiemvu =10;
+    public GameObject hoanthanh ;
     // Start is called before the first frame update
     void Start()
     {
-         nhiemvu = UnityEngine.Random.Range(100, 200);
+        hoanthanh.SetActive(false);
+        nhiemvu = UnityEngine.Random.Range(10, 20);
         quest.text = "/" + nhiemvu;
 
     }
@@ -69,17 +71,12 @@ public class danhca : MonoBehaviour
     {
         tong += diem;
         textscore.text = "Điểm: " + tong;
-        if (tong == nhiemvu)
+        if (tong >= nhiemvu)
         {
-            hoanthanh(1);
-
+            hoanthanh.SetActive(true);
+            Time.timeScale = 0  ;
         }
     }
 
-    public void hoanthanh(int ht)
-    {
-
-        ht = 10;
-        
-    }
+   
 }

@@ -23,7 +23,7 @@ public class player : MonoBehaviour
     Rigidbody2D rb;
 
 
-
+  
 
     int speed = 5;
     void Start()
@@ -33,6 +33,7 @@ public class player : MonoBehaviour
 
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
+       
 
 
     }
@@ -40,14 +41,14 @@ public class player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       
-       
+
            
+
         // attack
         if ( Input.GetKey(KeyCode.L))
         {
-           
 
+          
             animator.SetBool("atdoc", true);
             tamdanh.SetActive(true);
 
@@ -106,21 +107,31 @@ public class player : MonoBehaviour
             move2 = 0;  // No vertical movement
         }
 
-
-        if(move2 ==1&& move1 == 1|| move2 == 1 && move1 == -1)
-        {
-            animator.SetBool("swcheo", true);
-        }
-
-        if (move2 == 1 && move1 == 1 || move2 == 1 && move1 == -1)
+        // bơi chéo
+        if (move2 == 1 && (move1 == 1 || move1 == -1))
         {
             animator.SetBool("swcheo", true);
         }
         else
         {
             animator.SetBool("swcheo", false);
-
         }
+
+
+        //if (move2 ==1&& move1 == 1|| move2 == 1 && move1 == -1)
+       // {
+       //     animator.SetBool("swcheo", true);
+       // }
+
+     //   if (move2 == 1 && move1 == 1 || move2 == 1 && move1 == -1)
+     //   {
+       //     animator.SetBool("swcheo", true);
+      //  }
+      //  else
+      //  {
+       //     animator.SetBool("swcheo", false);
+
+      //  }
     }
     void FixedUpdate()
     {

@@ -8,10 +8,10 @@ public class nvhoanthanh : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "hoanthanh")
+        if (collision.gameObject.tag == "thuyen")
         {
             panel.SetActive(true);
-
+            Time.timeScale = 0;
         }
     }
 

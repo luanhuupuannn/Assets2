@@ -74,7 +74,7 @@ public class danhca : MonoBehaviour
         if (tong >= nhiemvu)
         {
             hoanthanh.SetActive(true);
-            Time.timeScale = 0  ;
+           
         }
     }
 

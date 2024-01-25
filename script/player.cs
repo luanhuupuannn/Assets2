@@ -27,7 +27,8 @@ public class player : MonoBehaviour
 
     int speed = 5;
     void Start()
-    {   
+    {
+        Time.timeScale = 1;
         luongmauhientai = luongmautoida;
         mau.capnhatthanhmau(luongmauhientai, luongmautoida);
 

@@ -17,7 +17,7 @@ public class danhca : MonoBehaviour
     void Start()
     {
         hoanthanh.SetActive(false);
-        nhiemvu = UnityEngine.Random.Range(10, 20);
+        nhiemvu = UnityEngine.Random.Range(100, 200);
         quest.text = "/" + nhiemvu;
 
     }

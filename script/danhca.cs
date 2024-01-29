@@ -8,6 +8,7 @@ using System;
 
 public class danhca : MonoBehaviour
 {
+    public GameObject efx;
     public TextMeshProUGUI textscore;
     public TextMeshProUGUI quest;
     int tong = 0;
@@ -31,36 +32,49 @@ public class danhca : MonoBehaviour
     {
         if (collision.gameObject.tag == "ca1")
         {
+            gietca(); ;
+
+
             Destroy(collision.gameObject);  // Destroy the colliding object with the tag "ca1"
             congdiem(1);
 
         }
         if (collision.gameObject.tag == "ca2")
         {
+            gietca(); ;
+
             Destroy(collision.gameObject);  
             congdiem(2);
 
         }
         if (collision.gameObject.tag == "ca3")
         {
+            gietca(); ;
+
             Destroy(collision.gameObject); 
             congdiem(3);
 
         }
         if (collision.gameObject.tag == "ca4")
         {
+            gietca(); ;
+
             Destroy(collision.gameObject);  
             congdiem(4);
 
         }
         if (collision.gameObject.tag == "ca5")
         {
+            gietca(); ;
+
             Destroy(collision.gameObject); 
             congdiem(5);
 
         }
         if (collision.gameObject.tag == "ca6")
         {
+            gietca(); ;
+
             Destroy(collision.gameObject); 
             congdiem(1);
 
@@ -76,6 +90,13 @@ public class danhca : MonoBehaviour
             hoanthanh.SetActive(true);
            
         }
+    }
+    void gietca()
+    {
+        GameObject cachet = Instantiate(efx,
+                       this.transform.position,
+                       this.transform.rotation);
+        Destroy(cachet, 0.5f);
     }
 
    

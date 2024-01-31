@@ -8,6 +8,7 @@ public class setTime : MonoBehaviour
 {
     public TextMeshProUGUI time;
     public float myValue ;
+    public GameObject gameovertime;
     // Start is called before the first frame update
     void Start()
     {// Lấy số lần nhấp từ script menu
@@ -29,6 +30,14 @@ public class setTime : MonoBehaviour
             myValue -= Time.deltaTime;
             time.text = "thời gian " + myValue;
         }
+        else if(myValue < 0)
+        {
+            gameovertime.SetActive(true);
+            Time.timeScale = 0;
+        
+        }
+        
+
         
     }
 

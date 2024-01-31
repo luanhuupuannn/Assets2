@@ -8,6 +8,7 @@ public class player : MonoBehaviour
 {
 
 
+    
     public hp mau;
     public float luongmauhientai;
     public float luongmautoida = 10;
@@ -22,12 +23,13 @@ public class player : MonoBehaviour
     private int flip;
     Rigidbody2D rb;
 
-
+    public GameObject gameover;
   
 
     int speed = 5;
     void Start()
     {
+
         Time.timeScale = 1;
         luongmauhientai = luongmautoida;
         mau.capnhatthanhmau(luongmauhientai, luongmautoida);
@@ -43,13 +45,11 @@ public class player : MonoBehaviour
     void Update()
     {
 
-           
+       
 
         // attack
         if ( Input.GetKey(KeyCode.L))
         {
-
-          
             animator.SetBool("atdoc", true);
             tamdanh.SetActive(true);
 
@@ -119,8 +119,8 @@ public class player : MonoBehaviour
         }
 
 
-        //if (move2 ==1&& move1 == 1|| move2 == 1 && move1 == -1)
-       // {
+     //if (move2 ==1&& move1 == 1|| move2 == 1 && move1 == -1)
+     // {
        //     animator.SetBool("swcheo", true);
        // }
 
@@ -156,19 +156,25 @@ public class player : MonoBehaviour
 
             if (luongmauhientai <= 0)
             {
+
                 animator.SetBool("dead", true);
+                gameover.SetActive(true);
+
+                Time.timeScale = 0;
             }
 
         }
 
 
     }
-
+   
+    // tắt hiệu ứng trúng đòn 
     void TatHieuUngTrungDon()
     {
         animator.SetBool("trumau", false);
     }
     
+    // rời khỏi mặt nước thì tất hiệu ứng 
 
     private void OnTriggerExit2D(Collider2D exitmatnuoc)
     {

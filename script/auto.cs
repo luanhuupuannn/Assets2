@@ -12,6 +12,7 @@ public class auto : MonoBehaviour
     private int flipmt;
     public float spf = 2; // Tốc độ di chuyển
     public float distance = 40.0f; // Khoảng cách di chuyển
+    public float latmat;
 
     private Vector3 startPosition; // Vị trí ban đầu
 
@@ -40,13 +41,13 @@ public class auto : MonoBehaviour
             if (speed < 0)
             {
                 Vector3 flipmt = transform.localScale; //xuay ảnh
-                flipmt.x = -1;
+                flipmt.x = -latmat;
                 transform.localScale = flipmt;
             }
             else
             {
                 Vector3 flipmt = transform.localScale; //xuay ảnh
-                flipmt.x = 1;
+                flipmt.x = latmat;
 
                 transform.localScale = flipmt;
             }
